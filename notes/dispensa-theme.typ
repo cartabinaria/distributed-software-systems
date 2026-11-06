@@ -10,11 +10,11 @@
   body,
 ) = {
   let styles = (
-    info: (fill: rgb("#eff6ff"), stroke: rgb("#93c5fd"), title: rgb("#1e40af")),
+    example: (fill: rgb("#eff6ff"), stroke: rgb("#93c5fd"), title: rgb("#1e40af")),
     warning: (fill: rgb("#fffbe2"), stroke: rgb("#fde047"), title: rgb("#854d0e")),
-    success: (fill: rgb("#f0fdf4"), stroke: rgb("#86efac"), title: rgb("#166534")),
-    definition: (fill: rgb("#f8fafc"), stroke: rgb("#cbd5e1"), title: rgb("#0f172a")),
-    example: (fill: rgb("#fcf4ff"), stroke: rgb("#f0abfc"), title: rgb("#701a75")),
+    definition: (fill: rgb("#f0fdf4"), stroke: rgb("#aacab1"), title: rgb("#1a9133")),
+    info: (fill: rgb("#f8fafc"), stroke: rgb("#cbd5e1"), title: rgb("#0f172a")),
+    success: (fill: rgb("#fcf4ff"), stroke: rgb("#f0abfc"), title: rgb("#701a75")),
   )
   let current = styles.at(kind, default: styles.info)
   let f-color = if fill-color != none { fill-color } else { current.fill }
@@ -67,7 +67,7 @@
         ]
       }
     },
-    footer: align(right)[ #text(size: 9pt, fill: rgb("#718096"))[#context counter(page).display()] ],
+    footer: align(right)[ #text(size: 9pt, fill: rgb("#718096"), font: ("Alice", "Liberation Serif", "DejaVu Serif", "serif"))[#context counter(page).display()] ],
   )
 
   // Tipografia globale
